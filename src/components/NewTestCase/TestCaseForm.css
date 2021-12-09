@@ -1,0 +1,80 @@
+.new-testcase__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new-testcase__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.new-testcase__control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  width: 20rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.new-testcase__control input[type="number"] {
+  font: inherit;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 10rem;
+  max-width: 50%;
+}
+
+.new-testcase__control button {
+  font: inherit;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 50rem;
+  max-width: 28%;
+  vertical-align: baseline;
+  margin-left: 28%;
+  margin-right: 72%;
+}
+
+.new-testcase__submit {
+  text-align: bottom;
+  float: right;
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.container {
+  inline-size: 400px;
+  block-size: 13em;
+  border: 5px solid rgb(111, 41, 97);
+  border-radius: 0.5em;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  align-items: end;
+  align-content: end;
+  margin: 1em;
+}
+
+.item:first-child {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  align-self: start;
+}
+
+.item {
+  padding: 10px;
+  background-color: rgba(111, 41, 97, 0.3);
+  border: 2px solid rgba(111, 41, 97, 0.5);
+}
