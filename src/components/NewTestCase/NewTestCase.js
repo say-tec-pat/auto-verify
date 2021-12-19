@@ -6,7 +6,7 @@ import './NewTestCase.css';
 async function fetchTestResultsHandler(url, dsTransId, ctl, setIsLoading) {
     setIsLoading(true);
     console.log("Just before fetch");
-    const apiUrl = 'http://' + url + '/verify?dstransid=' + dsTransId + '&ctl=' + ctl;
+    const apiUrl = 'https://' + url + '/verify?dstransid=' + dsTransId + '&ctl=' + ctl;
     console.log(apiUrl);
     let results = null;
     await fetch(apiUrl)
