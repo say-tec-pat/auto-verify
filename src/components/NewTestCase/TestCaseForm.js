@@ -5,7 +5,6 @@ import './TestCaseForm.css';
 const TestCaseForm = (props) => {
     const [enteredDsTransId, setEnteredDsTransId] = useState('');
     const [enteredCtlNum, setEnteredCtlNum] = useState('');
-    const [enteredBackend, setEnteredBackend] = useState('');
 
     const dsTransIdChangeHandler = (event) => {
         setEnteredDsTransId(event.target.value);
@@ -15,16 +14,11 @@ const TestCaseForm = (props) => {
         setEnteredCtlNum(event.target.value);
     };
 
-    const backendChangeHandler = (event) => {
-        setEnteredBackend(event.target.value);
-    };
-
     const submitHandler = (event) => {
         event.preventDefault();
 
         const testcaseData = {
             dsTransId: enteredDsTransId,
-            backendUrl: enteredBackend,
             ctlNum: enteredCtlNum,
             status: "un-verified"
         };
@@ -37,20 +31,11 @@ const TestCaseForm = (props) => {
         <form onSubmit={submitHandler}>
             <div className='new-testcase__controls'>
                 <div className='new-testcase__control'>
-                    <label>Authorization Code</label>
-                    <input
-                        type='text'
-                        value={enteredBackend}
-                        onChange={backendChangeHandler}
-                    />
-                </div>
-                <div className='new-testcase__control'>
                     <label>CTL Number</label>
                     <input
                         type='number'
                         min='1'
                         step='1'
-
                         value={enteredCtlNum}
                         onChange={ctlNumChangeHandler}
                     />
@@ -68,7 +53,6 @@ const TestCaseForm = (props) => {
                 </div>
             </div>
         </form >
-
     );
 };
 

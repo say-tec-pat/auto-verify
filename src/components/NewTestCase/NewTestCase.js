@@ -5,8 +5,7 @@ import './NewTestCase.css';
 
 async function fetchTestResultsHandler(url, dsTransId, ctl, setIsLoading) {
     setIsLoading(true);
-    console.log("Just before fetch");
-    const apiUrl = 'https://' + url + '/verify?dstransid=' + dsTransId + '&ctl=' + ctl;
+    const apiUrl = '/verify?dstransid=' + dsTransId + '&ctl=' + ctl;
     console.log(apiUrl);
     let results = null;
     await fetch(apiUrl)
@@ -18,7 +17,6 @@ async function fetchTestResultsHandler(url, dsTransId, ctl, setIsLoading) {
             //TO DO - utilize all these values in Parents
             results.dsTransId = dsTransId;
             results.ctl = ctl;
-            results.authCode = url;
         })
         .catch((error) => {
             console.log(error.message);
