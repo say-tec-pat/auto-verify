@@ -5,7 +5,7 @@ import './NewTestCase.css';
 
 async function fetchTestResultsHandler(url, dsTransId, ctl, setIsLoading) {
     setIsLoading(true);
-    const apiUrl = '/verify?dstransid=' + dsTransId + '&ctl=' + ctl;
+    const apiUrl = url + '/verify?dstransid=' + dsTransId + '&ctl=' + ctl;
     console.log(apiUrl);
     let results = null;
     await fetch(apiUrl)
